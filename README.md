@@ -238,8 +238,8 @@ Client on Computer B connected to `192.168.100.246`:
 
 | Date | Member (GitHub) | Task | Commit link |
 |---|---|---|---|
-| 2026-11-23 | Lucendo (@hyerone1) | Server: accept loop, thread per client, protocol | [commit](https://github.com/hyerone1/ITAS-2B-SD-Lucendo-Galos/commit/HASH) |
-| 2026-11-23 | Galos (@eryllegalos15-glitch) | Client: Swing window, connect, Question Queue and Poll panels | [commit](https://github.com/hyerone1/ITAS-2B-SD-Lucendo-Galos/commit/HASH) |
+| 2026-11-23 | Lucendo (@hyerone1) | Server: accept loop, thread per client, protocol | [commit](https://github.com/hyerone1/ITAS-2B-SD-Lucendo-Galos/commit/32b5385) |
+| 2026-11-23 | Galos (@eryllegalos15-glitch) | Client: Swing window, connect, Question Queue and Poll panels | [commit](https://github.com/hyerone1/ITAS-2B-SD-Lucendo-Galos/commit/6b0c91b) |
 
 *Replace each `HASH` with the real commit hash from `git log --oneline`, and add one row per task for each member using that member's own commit link.*
 
