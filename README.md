@@ -175,7 +175,7 @@ Test environment: Java JDK 21. Computer A (server and local clients): Windows, L
 | 7 | Invalid IP or port | Enter `abc` as host, a blank IP, or port `99999` | Helpful error; GUI stays responsive | Blank IP gave "Enter the server IP address."; port `99999` gave "Port must be a number from 1 to 65535."; host `abc` gave "Unknown host: abc"; wrong port 5001 gave "Cannot reach server". GUI stayed responsive. See [09a](#blank-ip-and-bad-port), [09b](#blank-ip-and-bad-port), [09](#invalid-host-or-port) | Pass |
 | 8 | Unavailable server | Connect while the server is stopped | "Cannot reach server" message; no freeze | "Cannot reach server localhost:5000 (Connection refused)" shown in red; no freeze. See [05](#error-handling-server-unavailable) | Pass |
 | 9 | Clean `/exit` | Type `/exit` | Client disconnects, others see "left the huddle" | Leaving client showed "Goodbye!" and went Offline with no connection-lost error; the remaining client saw "Alex left the huddle" and its list dropped to 1. See [13](#clean-exit), [13b](#clean-exit) | Pass |
-| 10 | Abrupt disconnect | Kill a client window or process | Server stays up; others see the user leave | Server stayed up and the other clients saw the user leave (server log: "Alex left (3 online)"). See [10](#user-left-and-chat-continues) | Pass |
+| 10 | Abrupt disconnect | Kill a client window or process | Server stays up; others see the user leave | Not tested separately. Clean `/exit` (test 9) was tested. | Not run |
 | 11 | Chat continues | After test 10, remaining clients chat | Messages are still delivered | Remaining clients kept sending and receiving messages. See [11](#chat-continues-after-a-user-leaves) | Pass |
 | 12 | Question Queue sync | Client A adds a question; Client B upvotes; Client C marks answered | All three clients show the same votes and status | Questions #1 and #2 were added; #1 showed 1 vote and "answered" and the same state appeared on every client. See [03](#question-queue-original-feature-1) | Pass |
 | 13 | Live Poll sync | Client A starts a poll; B and C vote; A ends it | Live counts match on all clients; winner or tie announced | Poll "What is your favorite language in programming?" ended with JAVA at 2 votes (100%) and "Poll winner: JAVA (2 vote(s))" was announced. See [04](#live-poll-original-feature-2) | Pass |
@@ -245,4 +245,4 @@ Client on Computer B connected to `192.168.100.246`:
 ## 12. Credits and AI Assistance
 
 - Built with the standard Java library only (`java.net`, `java.io`, `javax.swing`, `java.util.concurrent`).
-- AI assistance: Claude (Anthropic) was used to help design and review parts of the code and to help organize this README. Both members read, tested and can explain the whole code.
+- AI assistance: Claude (Anthropic) was used to help design and review parts of the code and to help organize this README. Both members read and tested.
